@@ -1,11 +1,5 @@
 .marquee {
-	background-color: radial-gradient(83.96% 199.05% at 16.04% 20.98%, #F2AA83 0%, #BDF585 100%);
-	position: absolute;
-	top: 0;
-	right: 0;
+  background: rgb(242,170,131);
+  background: linear-gradient(163deg, rgba(242,170,131,1) 0%, rgba(244,240,77,1) 70%, rgba(117,252,207,1) 100%);
 	padding-top: .25em;
-	
-	marquee {
-		width: 100%;
-	}
 }
