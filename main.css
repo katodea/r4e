@@ -9,12 +9,11 @@
 
 /* global variales */
 :root {
-  --rar-black: #000;
-  --rar-pink: #EF7FA7;
-  --rar-green: #BDF585;
-  --rar-yellow: #F4F04D;
-  --rar-orange: #F2AA83;
-  --rar-blue: #75FCCF;
+  --r4e-black: #000;
+  --r4e-white: #fff;
+  --r4e-purple: #BC94FF;
+  --r4e-green: #93D46B;
+  --r4e-orange: #FF8A00;
   --section-margin: 15.5vh;
   --section-padding: 1.5vw;
   font-size: 1em;
@@ -91,12 +90,12 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body {
-  background-color: var(--rar-black);
-  color: #fff;
+  background-color: var(--r4e-black);
+  color: var(--r4e-white);
   font-family: 'SpaceMono';
 }
 a {
-  color: var(--rar-pink);
+  color: var(--r4e-purple);
 }
 a.button {
 
@@ -132,99 +131,14 @@ ul.nav-links {
   margin: auto;
   font-size: 4vw;
   font-family: 'YatraOne';
-  color: #fff;
+  color: var(--r4e-white);
   display: block;
   width: fit-content;
 }
 
-/*begin ticker styling*/
-.marquee {
-  background: rgb(242,170,131);
-  background: linear-gradient(163deg, rgba(242,170,131,1) 0%, rgba(244,240,77,1) 70%, rgba(117,252,207,1) 100%);
-	padding-top: .25em;
-  color: var(--rar-black);
-}
-/*end ticker styling*/
-/*
-.blobs {
-  width: 20vh;
-  position: absolute;
-  top: 30vh;
-}
-*/
 svg {
   overflow: visible;
 }
-
-/* blob animations */
-@keyframes bloom {
-  0%{
-      transform: skew(5.8deg);
-      transform: skewY(12deg);
-  }
-  100%{
-      transform: skew(-8.3deg);
-      transform: skewY(-5.5deg);
-  }
-}
-@keyframes flib {
-  0%{
-      transform: skew(15deg);
-      transform: skewY(-8deg);
-  }
-  50%{
-      transform: skewX(10deg);
-      transform: skewY(-10deg);
-  }
-  100%{
-      transform: skew(15deg);
-      transform: skewY(5deg);
-  }
-}
-@keyframes flump {
-  0%{
-      transform: skew(5deg);
-      transform: skewY(-8deg);
-  }
-  100%{
-      transform: skew(-15deg);
-      transform: skewY(7deg);
-  }
-}
-
-/* end animations */
-
-#yellow-blob {
-  animation: bloom 3.5s ease 0s infinite alternate;
-  position: absolute;
-  top: 68vh;
-  left: 10vw;
-  width: 40vmax;
-  z-index: -1;
-  transform-origin: 50% 50%;
-}
-
-#pink-blob {
-  animation: flib 4.5s ease 0s infinite alternate;
-  position: absolute;
-  top: 60vh;
-  left: 65vw;
-  width: 30vmax;
-  z-index: -1;
-  transform-origin: 50% 50%;
-}
-
-#green-blob {
-  animation: flump 2.5s ease 0s infinite alternate;
-  position: absolute;
-  top: 15vh;
-  left: 40vw;
-  width: 28vmax;
-  z-index: -1;
-  transform-origin: 50% 50%;
-}
-
-
 
 #whomst {
   display: grid;
@@ -367,8 +281,8 @@ svg {
   *,
   *::before,
   *::after {
-    background: #fff !important;
-    color: #000 !important;
+    background: var(--r4e-white) !important;
+    color: var(--r4e-black) !important;
     /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
