@@ -7,6 +7,11 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+ /* gradient
+ background: rgb(188,148,255);
+ background: linear-gradient(101deg, rgba(188,148,255,1) 0%, rgba(255,138,0,1) 35%, rgba(147,212,107,1) 100%);
+*/
+
 /* global variales */
 :root {
   --r4e-black: #000;
@@ -16,8 +21,11 @@
   --r4e-orange: #FF8A00;
   --section-margin: 15.5vh;
   --section-padding: 1.5vw;
+  --button-padding: 20px;
+  --border-radius: 20px;
   font-size: 1em;
   line-height: 1.4;
+  --r4e-gradient: linear-gradient(214deg, rgba(188,148,255,1) 0%, rgba(255,138,0,1) 35%, rgba(147,212,107,1) 100%);
 }
 
 /*
@@ -98,16 +106,32 @@ a {
   color: var(--r4e-purple);
 }
 a.button {
+  padding: var(--button-padding);
+  border-radius: var(--border-radius);
+  color: var(--r4e-white);
+  text-decoration: none;
+  background: var(--r4e-purple);
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  display: block;
+  margin: var(--section-margin) auto;
+  width: 20vw;
+  text-align: center;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--r4e-purple);
+}
+a.button:hover {
+  background: none;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--r4e-purple);
+  color: var(--r4e-purple);
+}
 
-}
-header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: space-between;
-}
+/* nav menu — consistent on every page */
 
 nav {
   display: flex;
@@ -118,58 +142,204 @@ nav {
 .logo {
   width: 100px;
   height: 100px;
+  padding-inline-start: 1vw;
 }
+
 ul.nav-links {
   list-style: none;
   margin-left: auto;
 }
+
 .nav-links li {
   display: inline-block;
-  padding: 10px 20px 10px 20px;
+  padding-inline-end: 1vw;
+  padding-block-start: 25px;
 }
-.hero h1 {
+
+.nav-links > li > a {
+  text-decoration: none;
+}
+
+.nav-links > li > a:active {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+/* footer — consistent on every page */
+
+footer {
+  background-image: url("r4eHeart.svg");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* home page hero */
+
+.home-header {
+  height: 100vh;
+  display: block;
+  background-image: url("smileys.svg");
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-attachment: scroll;
+  background-size: 30vh;
+}
+
+.hero {
+  display: block;
   margin: auto;
-  font-size: 4vw;
-  font-family: 'YatraOne';
+  width: fit-content;
+  padding: 25vh var(--section-padding);
+}
+
+.hero h1 {
+  text-align: center;
+  margin: auto;
+  font-size: calc(46px + 2vw);
+  font-family: 'BioRhymeExpanded';
+  font-weight: bolder:
   color: var(--r4e-white);
   display: block;
   width: fit-content;
+  text-shadow: 3px 3px 0px var(--r4e-purple), 6px 6px 0px var(--r4e-green), 9px 9px 0px var(--r4e-orange);
 }
 
-svg {
-  overflow: visible;
+.hero h2 {
+  text-align: center;
+  font-size: calc(12px + 1.5vw);
+  font-weight: lighter;
+  color: var(--r4e-purple);
 }
+
+/* home page who we are section */
 
 #whomst {
-  display: grid;
-  grid-template-columns: 50vw auto;
-  gap: 3vw;
-  margin: var(--section-margin) var(--section-padding);
+  margin: var(--section-margin);
 }
 
 #whomst h2 {
-  font-family: 'YatraOne';
+  font-family: 'BioRhymeExpanded';
   text-align: center;
+  font-size: calc(12px + 1.5vw);
 }
 
-.whomst-one {
-  grid-column: 1 / 2;
+.whomst-container {
+  display: flex;
+  align-items: center;
+}
+.whomst-images img {
+  flex-shrink: 1;
+  padding-bottom: var(--section-padding);
+  width: 30vw;
+}
+.whomst-images {
+  display: flex;
+  flex-direction: column;
+  padding: var(--section-padding);
+}
+
+.whomst-text {
 
 }
-#whomst > div.whomst-one > img {
+.whomst-footer {
 
 }
 
-.whomst-two {
-  grid-column: 2 / 3;
-
-}
-.whomst-three {
-  grid-column: 1 / 3;
-}
+/* home page events section */
 
 #events {
-  background: conic-gradient(from 180deg at 50% 50%, #75FCCF -95.77deg, #F4F04D 10.5deg, #75FCCF 264.23deg, #F4F04D 370.5deg);
+  background: var(--r4e-purple);
+  background: var(--r4e-gradient);
+  padding: var(--section-padding);
+}
+#events h2 {
+  text-align: center;
+  font-family: BioRhymeExpanded;
+  font-size: calc(12px + 1.5vw);
+  margin: var(--section-margin);
+}
+.event-items {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.item {
+  position: relative;
+  padding: var(--section-padding);
+}
+.item h3 {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 40%;
+  font-size: calc(12px + 1.3vw);
+}
+
+/* events page */
+
+.events-header {
+  height: 50vh;
+  display: block;
+}
+.events-hero {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  padding: 10vh var(--section-padding);
+}
+.events-hero h1 {
+  text-align: center;
+  margin: auto;
+  font-size: calc(46px + 2vw);
+  font-family: 'BioRhymeExpanded';
+  font-weight: bolder:
+  color: var(--r4e-white);
+  display: block;
+  width: fit-content;
+  text-shadow: 3px 3px 0px var(--r4e-purple), 6px 6px 0px var(--r4e-green), 9px 9px 0px var(--r4e-orange);
+}
+
+.events-header h2 {
+  color: var(--r4e-purple);
+  text-align: center;
+  font-size: calc(12px + 1.5vw);
+  font-weight: lighter;
+}
+
+#events-page {
+  margin: var(--section-margin);
+}
+
+.recurring-events {
+
+}
+
+.recurring-events h2 {
+  font-family: 'BioRhymeExpanded';
+  color: var(--r4e-green);
+  text-align: center;
+  font-size: calc(12px + 1.5vw);
+}
+
+.special-events h2 {
+  font-family: 'BioRhymeExpanded';
+  color: var(--r4e-orange);
+  text-align: center;
+  font-size: calc(12px + 1.5vw);
+}
+
+.other-events h2 {
+  font-family: 'BioRhymeExpanded';
+  color: var(--r4e-purple);
+  text-align: center;
+  font-size: calc(12px + 1.5vw);
+}
+
+.smile-list {
+  list-style: none;
 }
 
 /* ==========================================================================
@@ -260,8 +430,25 @@ svg {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 500px) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 1200px) {
+  /* home page — who we are section. styling for smaller screen sizes */
+  .whomst-container {
+    flex-direction: column;
+  }
+  .whomst-images {
+    flex-direction: row;
+    width: 45vw;
+    justify-content: center;
+  }
+  .whomst-text {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  /* home page — events section. styling for smaller screen sizes */
+  .event-items {
+    flex-direction: column;
+  }
 }
 
 @media print,
