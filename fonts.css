@@ -1,9 +1,5 @@
-@font-face {
-  font-family: 'YatraOne';
-  src: url('YatraOne-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
+/*body*/
 @font-face {
   font-family: 'SpaceMono';
   src: url('SpaceMono-Regular.ttf') format('truetype');
@@ -15,4 +11,37 @@
   src: url('SpaceMono-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: bold;
+}
+/*headings*/
+@font-face {
+  font-family: 'YatraOne';
+  src: url('YatraOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BioRhymeExpanded';
+  src: url('BioRhymeExpanded-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'BioRhymeExpanded';
+  src: url('BioRhymeExpanded-ExtraBold.ttf') format('truetype');
+  font-weight: bolder;
+}
+@font-face {
+  font-family: 'BioRhymeExpanded';
+  src: url('BioRhymeExpanded-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'BioRhymeExpanded';
+  src: url('BioRhymeExpanded-Light.ttf') format('truetype');
+  font-weight: lighter;
+}
+@font-face {
+  font-family: 'BioRhymeExpanded';
+  src: url('BioRhymeExpanded-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
